@@ -1,0 +1,21 @@
+<!-- converter/templates/converter/text_input.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to HTML Converter</title>
+</head>
+<body>
+    <h1>Text to HTML Converter</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Convert</button>
+    </form>
+    {% if text_input.html_output %}
+    <h2>HTML Output:</h2>
+    <div>{{ text_input.html_output | safe }}</div>
+    {% endif %}
+</body>
+</html>

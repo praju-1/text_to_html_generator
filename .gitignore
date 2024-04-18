@@ -1,0 +1,4 @@
+venv
+converter/__pycache__
+converter/migrations/__pycache__
+text_to_html_generator/__pycache__
